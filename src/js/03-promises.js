@@ -1,4 +1,7 @@
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import Notiflix from 'notiflix';
+
+import 'notiflix/dist/notiflix-3.2.5.min.css'
 /*
  * @param1 {string}: Required, a text in string format.
  * @param2 {function | Object}: Optional, a callback function that will be called when the notification element has been clicked. Or, extending the initialize options with the new options for each notification element.
@@ -34,9 +37,9 @@ refs.btnSrartPromise.addEventListener('click', e => {
   for (let i = 1; i <= amount; i += 1) {
    console.log(firstDelay, delayStep, amount);
    createPromise(i, firstDelay).then(({position, delay}) => {
-    console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+    Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
    }).catch(({position, delay}) => {
-    console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+    Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
    });
    firstDelay += delayStep;
   };
