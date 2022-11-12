@@ -1,7 +1,7 @@
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import Notiflix from 'notiflix';
 
-import 'notiflix/dist/notiflix-3.2.5.min.css'
+import 'notiflix/dist/notiflix-3.2.5.min.css';
 /*
  * @param1 {string}: Required, a text in string format.
  * @param2 {function | Object}: Optional, a callback function that will be called when the notification element has been clicked. Or, extending the initialize options with the new options for each notification element.
